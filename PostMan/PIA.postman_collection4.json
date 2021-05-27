@@ -1,0 +1,303 @@
+{
+	"info": {
+		"_postman_id": "13a01ed3-15c5-4f41-b0dd-8412256dc43c",
+		"name": "PIA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreaToken",
+			"item": [
+				{
+					"name": "https://localhost:44375/api/login/authenticate",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"WebApiKey\", jsonData);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Username\":\"Manuel\",\r\n    \"Password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44375/api/login/authenticate",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44375",
+							"path": [
+								"api",
+								"login",
+								"authenticate"
+							]
+						},
+						"description": "Genera el Token de Autenticacion"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PeticionesGet",
+			"item": [
+				{
+					"name": "https://localhost:44375/api/Employees",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{WebApiKey}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44375/api/Employees",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44375",
+							"path": [
+								"api",
+								"Employees"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "22",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Obtiene un JSON con todos los empleados registrados, se ocupa un Token para obtener la informacion"
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:44375/api/Employees/?id=2",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{WebApiKey}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44375/api/Employees/?id=2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44375",
+							"path": [
+								"api",
+								"Employees",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						},
+						"description": "En este Caso se intenta obtener la Informacion del usuario sin agregar el Token de Autenticacion"
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:44375/api/Employees/?id=2 Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44375/api/Employees/?id=2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44375",
+							"path": [
+								"api",
+								"Employees",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						},
+						"description": "En este Caso se intenta obtener la Informacion del usuario sin agregar el Token de Autenticacion"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PeticionesPOST",
+			"item": [
+				{
+					"name": "https://localhost:44375/api/Employees?FirstName=Jeremy&LastName=Dooley&City=Austin&Country=USA",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{WebApiKey}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44375/api/Employees?FirstName=Jeremy&LastName=Dooley&City=Austin&Country=USA",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44375",
+							"path": [
+								"api",
+								"Employees"
+							],
+							"query": [
+								{
+									"key": "FirstName",
+									"value": "Jeremy"
+								},
+								{
+									"key": "LastName",
+									"value": "Dooley"
+								},
+								{
+									"key": "City",
+									"value": "Austin"
+								},
+								{
+									"key": "Country",
+									"value": "USA"
+								}
+							]
+						},
+						"description": "Agrega un nuevo empleado usando un metodo POST,\r\nen este ejemplo de agrega el nombre y apellidos que son obligatorios y City y Country que son Opcionales"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PeticionesDELETE",
+			"item": [
+				{
+					"name": "https://localhost:44375/api/Employees?id=11",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{WebApiKey}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44375/api/Employees?id=11",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44375",
+							"path": [
+								"api",
+								"Employees"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "11"
+								}
+							]
+						},
+						"description": "Elimina un empleado usando su ID"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PeticionesPUT",
+			"item": [
+				{
+					"name": "https://localhost:44375/api/Employees?id=22&Title=RimmyTim",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{WebApiKey}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44375/api/Employees?id=22&Title=RimmyTim",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44375",
+							"path": [
+								"api",
+								"Employees"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "22"
+								},
+								{
+									"key": "FirstName",
+									"value": "Alejandro",
+									"disabled": true
+								},
+								{
+									"key": "LastName",
+									"value": "Gonzales",
+									"disabled": true
+								},
+								{
+									"key": "Title",
+									"value": "RimmyTim"
+								},
+								{
+									"key": "City",
+									"value": "Austin",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Edita un empleado usando su ID para identificarlo"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
