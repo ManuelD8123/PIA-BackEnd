@@ -1,7 +1,7 @@
-_Equipo_
--Manuel Daniel Reyes Martinez 1561342
+#Equipo
+Manuel Daniel Reyes Martinez 1561342
 
-_Control y manejo de la aplicaion_
+#Control y manejo de la aplicaion_
 El proyecto creado usando ASP .NET Framework 4.6 e implementando las tecnologias CRUD, CORS asi como JWT
 
 CORS: Microsoft.AspNet.Cors
