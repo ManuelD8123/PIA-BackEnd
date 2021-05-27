@@ -1,4 +1,4 @@
-#Equipo
+# Equipo
 Manuel Daniel Reyes Martinez 1561342
 
 #Control y manejo de la aplicaion_
