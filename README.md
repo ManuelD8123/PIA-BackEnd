@@ -1,25 +1,25 @@
-# Equipo
+## Equipo
 Manuel Daniel Reyes Martinez 1561342
 
-#Control y manejo de la aplicaion_
+## Control y manejo de la aplicaion_
 El proyecto creado usando ASP .NET Framework 4.6 e implementando las tecnologias CRUD, CORS asi como JWT
 
-CORS: Microsoft.AspNet.Cors
-  *https://www.nuget.org/packages/Microsoft.AspNet.Cors/5.2.7?_src=template
+###CORS: Microsoft.AspNet.Cors
+  * https://www.nuget.org/packages/Microsoft.AspNet.Cors/5.2.7?_src=template
   
-JWT: Microsoft.IdentityModel.JsonWebTokens
-  *https://www.nuget.org/packages/Microsoft.IdentityModel.JsonWebTokens/6.11.1?_src=template
+###JWT: Microsoft.IdentityModel.JsonWebTokens
+  * https://www.nuget.org/packages/Microsoft.IdentityModel.JsonWebTokens/6.11.1?_src=template
 
-Las configuraciones se realizaron en los siguentes archivos:
-*App-Start
- *WebApiConfig.cs : En esta se configuro se activa CORS usando la libreria
-*Raiz
- *Web.Confg: En este en el apartado de appSettings se configura el JWT con 4 parametros:
-  *JWT_SECRET_KEY: la clave que nos ayuda a generar los JWT
-  *JWT_AUDIENCE_TOKEN: configura el puesto en el que se van a aestar recibiendo las audiencias
-  *JWT_ISSUER_TOKEN: la direccion a que hacer peticiones sobre donde obtener los Tokens
-  *JWT_EXPIRE_MINUTES: el tiempo en minutos que estara activo el Token antes de que se requiera solicitar otro
-*Controllers
+###Las configuraciones se realizaron en los siguentes archivos:
+* App-Start
+  * WebApiConfig.cs : En esta se configuro se activa CORS usando la libreria
+* Raiz
+  * Web.Confg: En este en el apartado de appSettings se configura el JWT con 4 parametros:
+    * JWT_SECRET_KEY: la clave que nos ayuda a generar los JWT
+    * JWT_AUDIENCE_TOKEN: configura el puesto en el que se van a aestar recibiendo las audiencias
+    * JWT_ISSUER_TOKEN: la direccion a que hacer peticiones sobre donde obtener los Tokens
+    * JWT_EXPIRE_MINUTES: el tiempo en minutos que estara activo el Token antes de que se requiera solicitar otro
+  * Controllers
  *EmployeesController: Se encarga de controlar las peticion en el apartado api/Employees, procesa todas las peticiones
  *LogInControllers: Se encarga la cominicacion y procesamiento de las solicitudes referentes a los Tokens
  *TockenGenerator: Contiene la logica para la generacion de tokens
