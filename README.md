@@ -1,7 +1,6 @@
 Equipo:
 -Manuel Daniel Reyes Martinez 1561342
 
-------------------------------------------------------------------------------------------------------------------------------
 Control y manejo de la aplicaion:
 El proyecto creado usando ASP .NET Framework 4.6 e implementando las tecnologias CRUD, CORS asi como JWT
 CORS: Microsoft.AspNet.Cors
@@ -30,7 +29,6 @@ Models
 *NorthWind: Contiene la estructura de las tablas
 *Employees: Contiene la definicion de la tabla Employees y sus campos y relaciones.
 
-------------------------------------------------------------------------------------------------------------------------------
 Solicitudes en PostMan: (El export esta en la carpeta PostMan)
 
 Para empezar todas las peticiones se realizaran en el enlace https://localhost:44375/api/Employees, pero entes de eso
