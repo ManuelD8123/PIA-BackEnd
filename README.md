@@ -37,7 +37,7 @@ Para empezar todas las peticiones se realizaran en el enlace https://localhost:4
 hay que obtener el Token para esto en Postman agregamos en el "Enviroment" una Key que se llame WebApiKey, esta es para
 guardar el Token y que lo temen las demas consultas en automatico.
 
-### Cosnultas en Postman
+### Consultas en Postman
 Hay 7 consultas en 5 carpetas:
 * CreaToken:
   * https://localhost:44375/api/login/authenticate Recibe el token y con la test lo guarda en el ambiente
