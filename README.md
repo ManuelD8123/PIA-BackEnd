@@ -50,3 +50,9 @@ Hay 7 consultas en 5 carpetas:
   * https://localhost:44375/api/Employees?id=11 Solicita borra el empleado con el id especificado
 * Peticiones PUT:
   * https://localhost:44375/api/Employees?id=22&Title=RimmyTim Edita un Employee existente proporcionando su id
+
+#Instrucciones
+
+## Abrir Visual Studio
+* Se abre Visual estudio y en **Archivo -> Abrir -> Solucion o Proyecto** seleccionar __PIA BackEnd.sln__
+* 
