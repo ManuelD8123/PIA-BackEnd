@@ -55,13 +55,16 @@ Hay 7 consultas en 5 carpetas:
 
 ## Apertura del Proyecto
 
-### Abrir Visual Studio
-* Se abre Visual estudio y en **Archivo -> Abrir -> Solucion o Proyecto** seleccionar __PIA BackEnd.sln__ (Se requiere .NET Framework 4.6 Instalado)
-* Una vez abierto se puede presionar F5 o Correr para inicar el proceso, en algunos casos puede ser que se mueva el puerto que se requiere para hacer las paeticiones desde Postman, para esto revisar lo siguiente
-  * En la ventana de Explorador de Soluciones dar clic derecho sobre PIA BackEnd (No confundir con la Solucion) y seleccionar Propiedades
-  * Se abrira una ventana que nos mostrara varias opciones, del Lado derecho hay una serie de menus, hay que selecionar Web.
-  * Dentro de Web abajo hay un apartado que dice URL del Prpyecto que deberia contener esta cadena __https://localhost:44375/__
-  * Si el problema es el puerto solo hace falta cambiarlo aunque esto hara que tengamos que alterar las consultas de PostMan, cambiando el puerto que viene despues del **localhost:**
+### Visual Studio
+* Abrir Visual Studio
+* En **Archivo -> Abrir -> Solucion o Proyecto** seleccionar __PIA BackEnd.sln__ (Se requiere .NET Framework 4.6 Instalado)
+* Una vez abierto se puede presionar F5 o Correr para inicar el proceso.
+
+En algunos casos puede ser que se mueva el puerto que se requiere para hacer las paeticiones desde Postman, para esto revisar lo siguiente
+* En la ventana de Explorador de Soluciones dar clic derecho sobre PIA BackEnd (No confundir con la Solucion) y seleccionar Propiedades
+* Se abrira una ventana que nos mostrara varias opciones, del Lado derecho hay una serie de menus, hay que selecionar Web.
+* Dentro de Web abajo hay un apartado que dice URL del Prpyecto que deberia contener esta cadena __https://localhost:44375/__
+* Si el problema es el puerto solo hace falta cambiarlo aunque esto hara que tengamos que alterar las consultas de PostMan, cambiando el puerto que viene despues del **localhost:**
 
 ## Apertura de PostMan
 Ya se encuentran unas solicitude en la carpeta de PostMan pero antes de poder correrlas hay que configurar postman para que funcione
