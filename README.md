@@ -53,7 +53,9 @@ Hay 7 consultas en 5 carpetas:
 
 # Instrucciones
 
-## Abrir Visual Studio
+## Apertura del Proyecto
+
+### Abrir Visual Studio
 * Se abre Visual estudio y en **Archivo -> Abrir -> Solucion o Proyecto** seleccionar __PIA BackEnd.sln__ (Se requiere .NET Framework 4.6 Instalado)
 * Una vez abierto se puede presionar F5 o Correr para inicar el proceso, en algunos casos puede ser que se mueva el puerto que se requiere para hacer las paeticiones desde Postman, para esto revisar lo siguiente
   * En la ventana de Explorador de Soluciones dar clic derecho sobre PIA BackEnd (No confundir con la Solucion) y seleccionar Propiedades
