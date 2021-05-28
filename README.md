@@ -75,8 +75,8 @@ hay dos modos Manual y Semi Automatico
 * Seleccionar el Apartado de Collections y dar clic al boton de Import
 * Seleccional el .json bajo el nombre **PIA.postman_collection4** esto nos importara las solicitudes de ejemplo
 * Abrir las conecciones y en la carpeta de CrearToken viene una consulta que al solicitar mientras esta corriendo el programa nos arrojara un Token
-* Abrir cualquier otra consulta y en la seccion de **Headers** va a haber una Key que se llama __Authorization__ en la columna de sustituir {{WebApiKey}} por el Token
-* repetir esto en las demas consultas
+* Abrir cualquier otra consulta y en la seccion de **Headers** va a haber una Key que se llama __Authorization__ en la columna Value hay que sustituir {{WebApiKey}} por el Token
+* Repetir esto en las demas consultas
 
 ### Semi Autmatico
 * Se crea un nuevo Enviroment o se abre uno con el que se desea Trabajar
